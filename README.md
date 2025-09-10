@@ -74,44 +74,6 @@ Grid World Navigation/
 └── README.md                      # This file
 ```
 
-## 🚀 Quick Start
-
-### Installation
-
-1. **Clone the repository:**
-```bash
-git clone https://github.com/Mitash0404/Grid-World-Navigation.git
-cd Grid-World-Navigation
-```
-
-2. **Install dependencies:**
-```bash
-pip install -r requirements.txt
-```
-
-3. **Run the system:**
-```bash
-python main.py --mode all
-```
-
-### Basic Usage
-
-```python
-from src.environment.grid_world import GridWorldEnv
-from src.algorithms.q_learning import QLearningAgent
-
-# Create environment
-env = GridWorldEnv(size=16, dynamic_obstacles=True)
-
-# Create and train agent
-agent = QLearningAgent(env.observation_space.n, env.action_space.n)
-agent.train(env, episodes=1000)
-
-# Evaluate performance
-results = agent.evaluate(env, episodes=100)
-print(f"Success Rate: {results['success_rate']:.3f}")
-```
-
 ## 📊 Performance Results
 
 ### Algorithm Comparison
@@ -129,79 +91,6 @@ print(f"Success Rate: {results['success_rate']:.3f}")
 - **95% Success Rate**: Q-Learning achieves 95% success rate in reaching the goal
 - **Dynamic Adaptation**: Algorithms successfully adapt to moving obstacles during episodes
 - **Parameter Optimization**: Automated tuning improves performance by 15-20%
-
-## 🔧 Configuration
-
-### Environment Parameters
-```python
-env = GridWorldEnv(
-    size=16,                    # Grid size (16x16)
-    dynamic_obstacles=True,     # Moving obstacles
-    reward_structure='shaped',  # Reward type: 'sparse', 'dense', 'shaped'
-    obstacle_density=0.1        # Fraction of grid cells that are obstacles
-)
-```
-
-### Algorithm Parameters
-```python
-agent = QLearningAgent(
-    state_size=256,             # 16x16 = 256 states
-    action_size=4,              # 4 actions: up, down, left, right
-    learning_rate=0.1,          # Learning rate (alpha)
-    discount_factor=0.99,       # Discount factor (gamma)
-    epsilon=0.1,                # Exploration rate
-    epsilon_decay=0.995,        # Epsilon decay rate
-    epsilon_min=0.01            # Minimum epsilon value
-)
-```
-
-## 📈 Usage Examples
-
-### 1. Algorithm Comparison
-```bash
-python main.py --mode compare
-```
-
-### 2. Parameter Optimization
-```bash
-python main.py --mode optimize
-```
-
-### 3. Performance Demonstration
-```bash
-python main.py --mode demo
-```
-
-### 4. Algorithm Showcase
-```bash
-python main.py --mode showcase
-```
-
-## 🧪 Testing
-
-Run the test suite:
-```bash
-python -m pytest tests/ -v
-```
-
-## 📊 Visualization
-
-The system provides comprehensive visualizations:
-
-- **Training Progress**: Episode rewards, success rates, and exploration decay
-- **Performance Comparison**: Algorithm comparison charts and statistical analysis
-- **Pathfinding Visualization**: Real-time agent movement and trajectory analysis
-- **Parameter Sensitivity**: Hyperparameter impact analysis
-
-## 🔬 Research Applications
-
-This project demonstrates several key concepts in reinforcement learning:
-
-- **Exploration vs Exploitation**: Epsilon-greedy strategies and decay schedules
-- **Value Function Approximation**: Neural network approaches for large state spaces
-- **Experience Replay**: Memory buffer techniques for stable learning
-- **Target Networks**: Techniques for reducing learning instability
-- **Prioritized Experience Replay**: Importance sampling for efficient learning
 
 ## 🚀 Advanced Features
 
@@ -230,27 +119,8 @@ This project demonstrates several key concepts in reinforcement learning:
 - **Scikit-learn**: Machine learning utilities
 - **Gym**: Reinforcement learning environment interface
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👨‍💻 Author
-
-**Mitash Shah**
-- **Period**: May 2024 - Aug 2024
-- **Technologies**: Python, TensorFlow, NumPy, Reinforcement Learning
-- **Focus**: Advanced pathfinding algorithms and performance optimization
-
-## 📖 References
-
-1. Sutton, R. S., & Barto, A. G. (2018). Reinforcement Learning: An Introduction
-2. Mnih, V., et al. (2015). Human-level control through deep reinforcement learning
-3. Van Hasselt, H., et al. (2016). Deep Reinforcement Learning with Double Q-learning
-4. Wang, Z., et al. (2016). Dueling Network Architectures for Deep Reinforcement Learning
-5. Schaul, T., et al. (2015). Prioritized Experience Replay
 
 
