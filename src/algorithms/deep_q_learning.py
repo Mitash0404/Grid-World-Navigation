@@ -526,3 +526,4 @@ class PrioritizedReplayDQNAgent(DQNAgent):
         
         # Update beta
         self.beta = min(1.0, self.beta + self.beta_increment)
+

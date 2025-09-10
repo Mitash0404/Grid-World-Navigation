@@ -542,3 +542,4 @@ class DoubleQLearningAgent:
         
         plt.tight_layout()
         plt.show()
+

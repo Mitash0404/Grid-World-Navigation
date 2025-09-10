@@ -449,3 +449,4 @@ class ParameterOptimizer:
         self.best_parameters = results_data['best_parameters']
         self.best_score = results_data['best_score']
         self.optimization_results = results_data['optimization_results']
+

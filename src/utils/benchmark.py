@@ -417,3 +417,4 @@ class PerformanceBenchmark:
         self.benchmark_results = results_data['benchmark_results']
         self.evaluation_episodes = results_data['evaluation_episodes']
         self.n_trials = results_data['n_trials']
+
