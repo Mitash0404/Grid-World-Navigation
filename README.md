@@ -253,7 +253,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 4. Wang, Z., et al. (2016). Dueling Network Architectures for Deep Reinforcement Learning
 5. Schaul, T., et al. (2015). Prioritized Experience Replay
 
----
-
-**Note**: This project was developed as a personal project to demonstrate advanced reinforcement learning techniques and pathfinding optimization capabilities.
 
